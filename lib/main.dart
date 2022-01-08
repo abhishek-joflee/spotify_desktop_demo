@@ -56,10 +56,29 @@ class Shell extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Spotify'),
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            child: Row(
+              children: <Widget>[
+                // side menu
+                Container(
+                  height: double.infinity,
+                  width: 280,
+                  color: Colors.green,
+                ),
+                // playlist screen
+              ],
+            ),
+          ),
+          // bottom bar
+          Container(
+            height: 84,
+            width: double.infinity,
+            color: Colors.blue,
+          )
+        ],
       ),
-      body: Container(),
     );
   }
 }
