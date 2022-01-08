@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:spotify_desktop_demo/ui/shell/shell.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -65,39 +66,6 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: const Shell(),
-    );
-  }
-}
-
-class Shell extends StatelessWidget {
-  const Shell({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: <Widget>[
-          Expanded(
-            child: Row(
-              children: <Widget>[
-                // side menu
-                Container(
-                  height: double.infinity,
-                  width: 280,
-                  color: Colors.green,
-                ),
-                // playlist screen
-              ],
-            ),
-          ),
-          // bottom bar
-          Container(
-            height: 84,
-            width: double.infinity,
-            color: Colors.blue,
-          )
-        ],
-      ),
     );
   }
 }
