@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_desktop_demo/ui/shell/widgets/library_playlist.dart';
+
+import 'side_menu_icon_tab.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({Key? key}) : super(key: key);
@@ -23,6 +26,29 @@ class SideMenu extends StatelessWidget {
               ),
             ],
           ),
+          SideMenuIconTab(
+            iconData: Icons.home,
+            title: "Home",
+            onTap: () {
+              debugPrint("Home tapped");
+            },
+          ),
+          SideMenuIconTab(
+            iconData: Icons.search,
+            title: "Search",
+            onTap: () {
+              debugPrint("Search tapped");
+            },
+          ),
+          SideMenuIconTab(
+            iconData: Icons.audiotrack,
+            title: "Radio",
+            onTap: () {
+              debugPrint("Radio tapped");
+            },
+          ),
+          const SizedBox(height: 12.0),
+          const LibraryPlayList(),
         ],
       ),
     );

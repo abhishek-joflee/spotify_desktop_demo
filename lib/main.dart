@@ -40,6 +40,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSwatch()
             .copyWith(secondary: const Color(0xFF1DB954)),
         iconTheme: const IconThemeData().copyWith(color: Colors.white),
+        scrollbarTheme: ScrollbarThemeData(
+          thumbColor:
+              MaterialStateProperty.resolveWith((states) => Colors.grey),
+        ),
         fontFamily: 'Montserrat',
         textTheme: TextTheme(
           headline2: const TextStyle(
