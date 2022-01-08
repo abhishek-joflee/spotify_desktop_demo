@@ -1,7 +1,26 @@
+import 'dart:io';
+
+import 'package:bitsdojo_window/bitsdojo_window.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
+  // if you run this on web
+  // Platform.* will crash the app
+  // so check if it's not web
+  if (!kIsWeb && (Platform.isMacOS || Platform.isLinux || Platform.isWindows)) {
+    doWhenWindowReady(() {
+      final win = appWindow;
+      const initialSize = Size(600, 700);
+      win.minSize = initialSize;
+      win.size = initialSize;
+      win.alignment = Alignment.center;
+      win.title = "MySpotify";
+      win.show();
+    });
+  }
 }
 
 class MyApp extends StatelessWidget {
