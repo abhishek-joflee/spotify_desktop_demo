@@ -4,6 +4,7 @@ import 'package:spotify_desktop_demo/data/data.dart';
 import 'package:spotify_desktop_demo/ui/playList/widgets/playlist_button.dart';
 
 import 'widgets/playlist_header.dart';
+import 'widgets/tracks_list.dart';
 
 class PlayListScreen extends StatefulWidget {
   const PlayListScreen({
@@ -127,6 +128,7 @@ class _PlayListScreenState extends State<PlayListScreen> {
             ),
             children: [
               PlaylistHeader(playlist: widget.playlist),
+              TracksList(tracks: widget.playlist.songs),
             ],
           ),
         ),
