@@ -23,6 +23,8 @@ void main() {
     doWhenWindowReady(() {
       final win = appWindow;
       win.minSize = const Size(600, 700);
+      win.alignment = Alignment.center;
+      win.title = "MySpotify";
       win.show();
     });
   }
