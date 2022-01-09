@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:spotify_desktop_demo/data/data.dart';
-import 'package:spotify_desktop_demo/data/model/current_track_model.dart';
+
+import '../../../data/data.dart';
+import '../../../data/model/current_track_model.dart';
 
 class TracksList extends StatelessWidget {
   const TracksList({

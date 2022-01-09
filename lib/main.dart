@@ -4,8 +4,9 @@ import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:spotify_desktop_demo/data/model/current_track_model.dart';
-import 'package:spotify_desktop_demo/ui/shell/shell.dart';
+
+import 'data/model/current_track_model.dart';
+import 'ui/shell/shell.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

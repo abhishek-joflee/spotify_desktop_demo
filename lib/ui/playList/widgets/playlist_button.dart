@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_desktop_demo/data/data.dart';
 
 class PlayListButtons extends StatelessWidget {
   const PlayListButtons({

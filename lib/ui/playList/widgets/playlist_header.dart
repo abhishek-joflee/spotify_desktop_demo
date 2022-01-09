@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:spotify_desktop_demo/data/data.dart';
-
+import '../../../data/data.dart';
 import 'playlist_button.dart';
 
 class PlaylistHeader extends StatelessWidget {

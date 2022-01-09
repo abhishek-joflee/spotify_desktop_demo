@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_desktop_demo/ui/shell/widgets/library_playlist.dart';
 
+import 'library_playlist.dart';
 import 'side_menu_icon_tab.dart';
 
 class SideMenu extends StatelessWidget {

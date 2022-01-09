@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_desktop_demo/data/data.dart';
+
+import '../../../data/data.dart';
 
 class LibraryPlayList extends StatefulWidget {
   const LibraryPlayList({Key? key}) : super(key: key);
