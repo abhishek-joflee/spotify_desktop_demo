@@ -14,7 +14,7 @@ void main() {
   if (!kIsWeb && (Platform.isMacOS || Platform.isLinux || Platform.isWindows)) {
     doWhenWindowReady(() {
       final win = appWindow;
-      const initialSize = Size(600, 700);
+      const initialSize = Size(800, 600);
       win.minSize = initialSize;
       win.size = initialSize;
       win.alignment = Alignment.center;
