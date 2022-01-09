@@ -3,11 +3,18 @@ import 'dart:io';
 import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:spotify_desktop_demo/data/model/current_track_model.dart';
 import 'package:spotify_desktop_demo/ui/shell/shell.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => CurrentTrackModel(),
+      child: const MyApp(),
+    ),
+  );
   // if you run this on web
   // Platform.* will crash the app
   // so check if it's not web
