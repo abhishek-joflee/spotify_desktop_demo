@@ -22,11 +22,7 @@ void main() {
   if (!kIsWeb && (Platform.isMacOS || Platform.isLinux || Platform.isWindows)) {
     doWhenWindowReady(() {
       final win = appWindow;
-      const initialSize = Size(800, 600);
-      win.minSize = initialSize;
-      win.size = initialSize;
-      win.alignment = Alignment.center;
-      win.title = "MySpotify";
+      win.minSize = const Size(600, 700);
       win.show();
     });
   }
