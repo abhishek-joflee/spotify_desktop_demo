@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:spotify_desktop_demo/data/data.dart';
 
+import 'widgets/playlist_header.dart';
+
 class PlayListScreen extends StatefulWidget {
   const PlayListScreen({
     Key? key,
@@ -15,6 +17,20 @@ class PlayListScreen extends StatefulWidget {
 }
 
 class _PlayListScreenState extends State<PlayListScreen> {
+  late ScrollController _scrollController;
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController = ScrollController();
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,9 +53,10 @@ class _PlayListScreenState extends State<PlayListScreen> {
                     color: Colors.black26,
                     shape: BoxShape.circle,
                   ),
-                  child: const Icon(
+                  child: Icon(
                     Icons.chevron_left,
                     size: 28.0,
+                    color: Theme.of(context).iconTheme.color,
                   ),
                 ),
               ),
@@ -53,9 +70,10 @@ class _PlayListScreenState extends State<PlayListScreen> {
                     color: Colors.black26,
                     shape: BoxShape.circle,
                   ),
-                  child: const Icon(
+                  child: Icon(
                     Icons.chevron_right,
                     size: 28.0,
+                    color: Theme.of(context).iconTheme.color,
                   ),
                 ),
               ),
@@ -76,9 +94,10 @@ class _PlayListScreenState extends State<PlayListScreen> {
             splashRadius: 25.0,
             padding: const EdgeInsets.only(),
             onPressed: () {},
-            icon: const Icon(
+            icon: Icon(
               Icons.keyboard_arrow_down,
               size: 30.0,
+              color: Theme.of(context).iconTheme.color,
             ),
           ),
           const SizedBox(width: 20.0),
@@ -95,6 +114,19 @@ class _PlayListScreenState extends State<PlayListScreen> {
               Theme.of(context).backgroundColor,
             ],
             stops: const [0, 0.3],
+          ),
+        ),
+        child: Scrollbar(
+          controller: _scrollController,
+          child: ListView(
+            controller: _scrollController,
+            padding: const EdgeInsets.symmetric(
+              vertical: 60.0,
+              horizontal: 20.0,
+            ),
+            children: [
+              PlaylistHeader(playlist: widget.playlist),
+            ],
           ),
         ),
       ),

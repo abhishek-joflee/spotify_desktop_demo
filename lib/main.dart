@@ -38,6 +38,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: const Color(0xFF121212),
         primaryColor: Colors.black,
         colorScheme: ColorScheme.fromSwatch().copyWith(
+          brightness: Brightness.dark,
           secondary: const Color(0xFF1DB954),
         ),
         iconTheme: const IconThemeData().copyWith(color: Colors.white),
