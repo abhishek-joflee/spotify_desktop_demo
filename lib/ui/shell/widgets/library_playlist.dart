@@ -26,7 +26,6 @@ class _LibraryPlayListState extends State<LibraryPlayList> {
   Widget build(BuildContext context) {
     return Expanded(
       child: Scrollbar(
-        isAlwaysShown: true,
         controller: _sideMenuScrollController,
         child: ListView(
           controller: _sideMenuScrollController,

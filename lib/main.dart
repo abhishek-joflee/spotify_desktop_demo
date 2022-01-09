@@ -37,12 +37,15 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: const Color(0xFF121212),
         backgroundColor: const Color(0xFF121212),
         primaryColor: Colors.black,
-        colorScheme: ColorScheme.fromSwatch()
-            .copyWith(secondary: const Color(0xFF1DB954)),
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          secondary: const Color(0xFF1DB954),
+        ),
         iconTheme: const IconThemeData().copyWith(color: Colors.white),
         scrollbarTheme: ScrollbarThemeData(
           thumbColor:
-              MaterialStateProperty.resolveWith((states) => Colors.grey),
+              MaterialStateProperty.resolveWith((states) => Colors.grey[800]),
+          isAlwaysShown: true,
+          thickness: MaterialStateProperty.resolveWith((states) => 6.0),
         ),
         fontFamily: 'Montserrat',
         textTheme: TextTheme(
